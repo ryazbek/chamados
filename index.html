@@ -180,17 +180,16 @@
 
 
 
-
-<script>
-    <div class="counter">Total de Acessos: <span id="accessCount">0</span></div>
-
-        let accessCount = 0;
+<div class="counter">Total de Acessos: <span id="accessCount">0</span></div>
+    <script>
+        let accessCount = Number(localStorage.getItem('accessCount')) || 0;
         const accessCountElement = document.getElementById('accessCount');
         updateCounter();
 
         function updateCounter() {
             accessCount++;
             accessCountElement.textContent = accessCount;
+            localStorage.setItem('accessCount', accessCount);
         }
     </script>
 </body>
