@@ -134,6 +134,10 @@
     </style>
 </head>
 <body>
+
+<div class="counter">Total de Acessos: <span id="accessCount">0</span></div>
+
+    
     <div class="logo">
         <img src="https://yt3.googleusercontent.com/ytc/AOPolaTNVj0sMeIBZaftG1Z_-VFZA62iEcJS7BDnBNpa=s176-c-k-c0x00ffffff-no-rj" alt="Logo do Site">
     </div>
@@ -180,7 +184,7 @@
 
 
 
-<div class="counter">Total de Acessos: <span id="accessCount">0</span></div>
+
     <script>
         let accessCount = Number(localStorage.getItem('accessCount')) || 0;
         const accessCountElement = document.getElementById('accessCount');
