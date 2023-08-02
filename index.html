@@ -146,9 +146,6 @@
 
 
 <form action="https://formsubmit.co/informatica@ryazbek.com.br" method="POST">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_next" value="https://ryazbek.github.io/chamados/obrigado.html">
-	
       <!-- Campos de informações pessoais -->
   <input type="text" name="nome" placeholder="Seu nome" required>
   <input type="text" name="ramal" placeholder="Seu ramal" required>
@@ -234,120 +231,17 @@
     </div>
 </body>
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   
 <br>
   <!-- Campo da mensagem -->
   <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
   
-  
-  
-  
-  
-  <script>
-        // Função para fazer uma requisição GET para o servidor e obter o valor atual do contador
-        function getContador() {
-            fetch('contador.txt')
-                .then(response => response.text())
-                .then(contador => {
-                    const contadorElement = document.getElementById('contador');
-                    contadorElement.innerText = contador;
-                })
-                .catch(error => console.error('Erro ao obter o contador:', error));
-        }
 
-        // Função para atualizar o valor do contador no servidor
-        function atualizarContador(contador) {
-            fetch('atualizar_contador.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: 'contador=' + contador
-            })
-            .catch(error => console.error('Erro ao atualizar o contador:', error));
-        }
-
-        // Função para inicializar o contador
-        function iniciarContador() {
-            getContador();
-        }
-
-        // Função para aumentar o contador e atualizar na página e no servidor
-        function aumentarContador() {
-            const contadorElement = document.getElementById('contador');
-            let contador = parseInt(contadorElement.innerText);
-            contador++;
-            contadorElement.innerText = contador;
-
-            atualizarContador(contador);
-        }
-
-        // Chama a função iniciarContador quando a página for carregada
-        window.onload = iniciarContador;
-
-        // Chama a função aumentarContador quando a página é atualizada
-        window.onbeforeunload = aumentarContador;
-    </script>
-  
-  
-  
-  
-  
-  
-  
- 
-  
   <button type="submit">Abrir chamado</button>
 </form>
-
-
-
-
-
-
-
-    <div class="counter">Total de Acessos: <span id="accessCount">0</span></div>
-
-
-
-
-    <script>
-        // Simulação de contador de acessos em JavaScript
-        // Você deve implementar a lógica de contagem de acessos no servidor
-        let accessCount = 0;
-        const accessCountElement = document.getElementById('accessCount');
-        updateCounter();
-
-        function updateCounter() {
-            accessCount++;
-            accessCountElement.textContent = accessCount;
-        }
-    </script>
+<br>
+<br>
+ </script>
 </body>
 </html>
