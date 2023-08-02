@@ -18,7 +18,7 @@
       font-size: 16px;
     }
 
-    
+    /* Adicione outros estilos de formatação conforme necessário */
   </style>
 
 
@@ -54,7 +54,7 @@
     </style>
 
 
-
+ 
 
 
     <style>
@@ -134,10 +134,6 @@
     </style>
 </head>
 <body>
-
-
-
-    
     <div class="logo">
         <img src="https://yt3.googleusercontent.com/ytc/AOPolaTNVj0sMeIBZaftG1Z_-VFZA62iEcJS7BDnBNpa=s176-c-k-c0x00ffffff-no-rj" alt="Logo do Site">
     </div>
@@ -151,9 +147,6 @@
 
 <form action="https://formsubmit.co/informatica@ryazbek.com.br" method="POST">
       <!-- Campos de informações pessoais -->
-    <input type="hidden" name="_next" value="https://ryazbek.github.io/chamados/obrigado.html">
-    <input type="hidden" name="_captcha" value="false">
-    
   <input type="text" name="nome" placeholder="Seu nome" required>
   <input type="text" name="ramal" placeholder="Seu ramal" required>
 
@@ -173,15 +166,185 @@
   <!-- Campos de ID e Senha -->
   <input type="text" name="id" placeholder="ID TeamViewer ou Anydesk" required>
   <input type="text" name="senha" placeholder="Senha, caso sua escolha seja TeamViewer" required>
-
+  
+  <br>
+ 
+  
+  
+  
+  
+  
+      <style>
+        body {
+            font-family: calibri, sans-serif;
+        }
+        .caixa-criticidade 
+		
+        .selecao-criticidade {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .botao-selecao {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            padding: 2px 5px;
+            margin-bottom: 2px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .botao-selecao input[type="radio"] {
+            margin-right: 10px; /* Espaçamento entre a caixa de seleção e o texto */
+        }
+        .botao-selecao label {
+            cursor: pointer;
+        }
+        .botao-normal {
+            color: #008000; /* Verde */
+        }
+        .botao-urgente {
+            color: #000000; /* Preto */
+        }
+        .botao-critico {
+            color: #FF0000; /* Vermelho */
+        }
+    </style>
+</head>
+<body>
+    <div class="caixa-criticidade">
+       <fieldset> <legend>Criticidade do chamado</legend>
+        <div class="selecao-criticidade">
+            <label class="botao-selecao botao-normal">
+                <input type="radio" name="criticidade" value="Normal">
+                Normal
+            </label>
+            <label class="botao-selecao botao-urgente">
+                <input type="radio" name="criticidade" value="Urgente">
+                Urgente
+            </label>
+            <label class="botao-selecao botao-critico">
+                <input type="radio" name="criticidade" value="Critico">
+                Critico
+            </label></fieldset>
+        </div>
+    </div>
+</body>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<br>
   <!-- Campo da mensagem -->
-  <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>   
+  <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+  
+  
+  
+  
+  
+  <script>
+        // Função para fazer uma requisição GET para o servidor e obter o valor atual do contador
+        function getContador() {
+            fetch('contador.txt')
+                .then(response => response.text())
+                .then(contador => {
+                    const contadorElement = document.getElementById('contador');
+                    contadorElement.innerText = contador;
+                })
+                .catch(error => console.error('Erro ao obter o contador:', error));
+        }
+
+        // Função para atualizar o valor do contador no servidor
+        function atualizarContador(contador) {
+            fetch('atualizar_contador.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: 'contador=' + contador
+            })
+            .catch(error => console.error('Erro ao atualizar o contador:', error));
+        }
+
+        // Função para inicializar o contador
+        function iniciarContador() {
+            getContador();
+        }
+
+        // Função para aumentar o contador e atualizar na página e no servidor
+        function aumentarContador() {
+            const contadorElement = document.getElementById('contador');
+            let contador = parseInt(contadorElement.innerText);
+            contador++;
+            contadorElement.innerText = contador;
+
+            atualizarContador(contador);
+        }
+
+        // Chama a função iniciarContador quando a página for carregada
+        window.onload = iniciarContador;
+
+        // Chama a função aumentarContador quando a página é atualizada
+        window.onbeforeunload = aumentarContador;
+    </script>
+  
+  
+  
+  
+  
+  
+  
+ 
   
   <button type="submit">Abrir chamado</button>
 </form>
 
 
-   
-    
+
+
+
+
+
+    <div class="counter">Total de Acessos: <span id="accessCount">0</span></div>
+
+
+
+
+    <script>
+        // Simulação de contador de acessos em JavaScript
+        // Você deve implementar a lógica de contagem de acessos no servidor
+        let accessCount = 0;
+        const accessCountElement = document.getElementById('accessCount');
+        updateCounter();
+
+        function updateCounter() {
+            accessCount++;
+            accessCountElement.textContent = accessCount;
+        }
+    </script>
 </body>
 </html>
