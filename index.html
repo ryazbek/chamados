@@ -182,18 +182,8 @@
 
 
 
-<div class="counter">Total de Acessos: <span id="accessCount">112</span></div>
-    <script>
-        let accessCount = Number(localStorage.getItem('accessCount')) || 0;
-        const accessCountElement = document.getElementById('accessCount');
-        updateCounter();
-
-        function updateCounter() {
-            accessCount++;
-            accessCountElement.textContent = accessCount;
-            localStorage.setItem('accessCount', accessCount);
-        }
-    </script>
+<div class="text">RYAZBEK: <span id="text">Obrigado por usar nosso sistema de chamados!</span></div>
+   
     
 </body>
 </html>
