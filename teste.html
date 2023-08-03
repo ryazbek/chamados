@@ -7,15 +7,21 @@
 
 
 
-<form action="https://formspree.io/f/mwkdvyvo" method="post">
-        <input type="text" name="nome" placeholder="Nome" required>
-        <input type="email" name="email" placeholder="E-mail" required>
-        <input type="text" name="assunto" placeholder="Assunto" required>
-        <textarea name="mensagem" placeholder="Mensagem" required></textarea>
-        <input type="file" name="_attachment">
-        <input type="submit" value="Enviar">
-    </form>
-	
+<form
+  action="https://formspree.io/f/mwkdvyvo"
+  method="POST"
+  enctype="multipart/form-data"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your file:
+    <input type="file" name="upload">
+  </label>
+  <button type="submit">Send</button>
+</form>
 	
 	
 </body>
