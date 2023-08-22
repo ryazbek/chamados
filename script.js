@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <p style="font-weight: bold; font-family: Arial; font-size: 11px;">${name}</p>
             <p style="font-family: Arial; font-size: 10px;">${title}</p>
             <p style="font-family: Arial; font-size: 8px; color: #0563C1;">E-mail: ${email}</p>
+            <p style="font-family: Arial; font-size: 8px; color: #767171;">Telefone: ${phone}</p>
             <p style="font-family: Arial; font-size: 8px; color: #767171;">Endereço da obra ou escritório: ${address}</p>
         `;
         signatureDiv.innerHTML = signature;
