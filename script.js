@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const emailInput = document.getElementById("email");
     const phoneInput = document.getElementById("phone");
     const addressInput = document.getElementById("address");
-    const signatureTextarea = document.getElementById("signature");
+    const signatureDiv = document.getElementById("signature");
 
     generateButton.addEventListener("click", function() {
         const name = nameInput.value;
@@ -15,12 +15,11 @@ document.addEventListener("DOMContentLoaded", function() {
         const address = addressInput.value;
 
         const signature = `
-            ${name}
-            ${title}
-            E-mail: ${email}
-            Telefone: ${phone}
-            Endereço da obra ou escritório: ${address}
+            <p style="font-weight: bold; font-family: Arial; font-size: 11px;">${name}</p>
+            <p style="font-family: Arial; font-size: 10px;">${title}</p>
+            <p style="font-family: Arial; font-size: 8px; color: #0563C1;">E-mail: ${email}</p>
+            <p style="font-family: Arial; font-size: 8px; color: #767171;">Endereço da obra ou escritório: ${address}</p>
         `;
-        signatureTextarea.innerText = signature;
+        signatureDiv.innerHTML = signature;
     });
 });
