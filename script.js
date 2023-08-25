@@ -15,11 +15,11 @@ document.addEventListener("DOMContentLoaded", function() {
         const address = addressInput.value;
 
         const signature = `
-            <p style="font-weight: bold; font-family: Arial; font-size: 18px;">${name}</p>
-            <p style="font-family: Arial; font-size: 15px;">${title}</p>
-            <p style="font-family: Arial; font-size: 10px; color: #0563C1;">E-mail: ${email}</p>
-            <p style="font-family: Arial; font-size: 10px; color: #767171;">Telefone: ${phone}</p>
-            <p style="font-family: Arial; font-size: 10px; color: #767171;">Endereço da obra ou escritório: ${address}</p>
+            <br style="font-weight: bold; font-family: Arial; font-size: 18px;">${name}</br>
+            <br style="font-family: Arial; font-size: 15px;">${title}</br>
+            <br style="font-family: Arial; font-size: 10px; color: #0563C1;">E-mail: ${email}</br>
+            <br style="font-family: Arial; font-size: 10px; color: #767171;">Telefone: ${phone}</br>
+            <br style="font-family: Arial; font-size: 10px; color: #767171;">Endereço da obra ou escritório: ${address}</br>
         `;
         signatureDiv.innerHTML = signature;
     });
