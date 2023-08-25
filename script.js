@@ -1,10 +1,20 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // ... Aquisição de elementos do formulário e botão de geração ...
+    const generateButton = document.getElementById("generate");
+    const nameInput = document.getElementById("name");
+    const titleInput = document.getElementById("title");
+    const emailInput = document.getElementById("email");
+    const phoneInput = document.getElementById("phone");
+    const addressInput = document.getElementById("address");
+    const signatureDiv = document.getElementById("signature");
 
     generateButton.addEventListener("click", function() {
-        // ... Aquisição de valores dos campos do formulário ...
+        const name = nameInput.value;
+        const title = titleInput.value;
+        const email = emailInput.value;
+        const phone = phoneInput.value;
+        const address = addressInput.value;
 
-        const signature = `
+       const signature = `
             <span style="font-weight: bold; font-family: Arial; font-size: 18px;">${name}</span>
             <br style="font-family: Arial; font-size: 15px;">${title}
             <br style="font-family: Arial; font-size: 10px; color: #0563C1;">E-mail: ${email}
